@@ -1,3 +1,3 @@
 # Basics
 
-C Porgramming Launguage
+C Porgramming Language
