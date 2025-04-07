@@ -234,3 +234,149 @@ int main(void)
 
 #endif
 #pragma endregion
+
+#pragma region 조건 연산자
+#if 0
+
+int main(void)
+{
+	char area;
+	int n1 = 3, n2 = 7, kor = 85;
+	printf("지역 입력(서울: S, 인천: I): ");
+	scanf("%c", &area);
+	n1 > n2 ? n1-- : n2--;
+	printf("n1 = %d, n2 = %d\n", n1, n2);
+	printf("지역은 %s입니다.\n", area=='S'?"서울":"인천");
+	printf("국어는 %s 입니다.\n", kor <= 70 ? "불합격" : "합격");
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region if / else 조건문
+#if 0
+
+int main(void)
+{
+	int gender;
+	int c = 95;
+	printf("성별 입력(남자: 1, 여자: 2): ");
+	scanf("%d", &gender);
+	printf("성별은 ");
+	if (gender == 1)
+	{
+		printf("남자\n");
+	}
+	else
+	{
+		printf("여자\n");
+	}
+	printf("C 언어는 ");
+	if (c >= 80)
+	{
+		printf("PASS\n");
+	}
+	else
+	{
+		printf("Non-Pass\n");
+	}
+	return 0;
+}
+
+#endif
+
+#if 0
+
+int main(void)
+{
+	int num;
+
+	printf("정수를 입력하시오: ");
+	scanf("%d", &num);
+	printf("입력한 수 %d는(은) ", num);
+	if (num % 2 == 0)
+	{
+		printf("짝수\n");
+	}
+	else
+	{
+		printf("홀수\n");
+	}
+
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region if / else if
+#if 0
+
+int main(void)
+{
+		int ban;
+		double c;
+		char name[20];
+		char grade;
+
+		printf("반(1, 2, 3) 입력: ");
+		scanf("%d", &ban);
+		printf("이름 입력: ");
+		scanf("%s", name);
+		printf("C점수 입력: ");
+		scanf("%lf", &c);
+
+		if (c >= 90)
+		{
+			grade = 'A';
+		}
+		else if(c >= 80)
+		{
+			grade = 'B';
+		}
+		else if(c >= 70)
+		{
+			grade = 'C';
+		}
+		else
+		{
+			grade = 'F';
+		}
+
+		printf("%d반, %s, %.1f점, %c\n", ban, name, c, grade);
+		return 0;
+
+}
+
+#endif
+#pragma endregion
+
+#pragma region switch
+#if 1
+
+int main(void)
+{
+	int rank, p_money;
+	printf("등수 입력: ");
+	scanf("%d", &rank);
+	switch (rank)
+	{
+	case 1:
+		p_money = 1000000;
+		break;
+	case 2:
+		p_money = 500000;
+		break;
+	case 3:
+		p_money = 200000;
+		break;
+	default:
+		p_money = 0;
+	}
+	printf("%d등은 상금 %d원\n", rank, p_money);
+	return 0;
+}
+
+#endif
+#pragma endregion
