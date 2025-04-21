@@ -353,7 +353,7 @@ int main(void)
 #pragma endregion
 
 #pragma region switch
-#if 1
+#if 0
 
 int main(void)
 {
@@ -375,6 +375,237 @@ int main(void)
 		p_money = 0;
 	}
 	printf("%d등은 상금 %d원\n", rank, p_money);
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Alpha
+#if 0
+
+int main(void)
+{
+		char gender;
+		int num;
+		double height, weight, bmi;
+		printf("성별 입력(남자: M, 여자: F): ");
+		scanf("%c", &gender);
+		printf("학번 입력: ");
+		scanf("%d", &num);
+		printf("키, 몸무게 입력: ");
+		scanf("%lf %lf", &height, &weight);
+		printf("성별은 %c, 학번은 %d, 키는 %.1fcm, 몸무게는 %.1fkg\n", gender, num, height, weight);
+		bmi = weight / (height * height) * 10000;
+		printf("BMI는 %.1f ", bmi);
+		if (bmi < 18.5)
+		{
+			printf("저체중");
+		}
+		else if (bmi < 23)
+		{
+			printf("정상");
+		}
+		else if (bmi < 25)
+		{
+			printf("과체중");
+		}
+		else
+		{
+			printf("심각한 비만");
+		}
+
+		return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Bravo
+#if 0
+
+int main(void)
+{
+	char grade;
+	printf("학점을 입력하시오(A, B, C, D, F): ");
+	scanf("%c", &grade);
+	switch (grade)
+	{
+	case 'A':
+		printf("Excellent!\n");
+		break;
+	case 'B':
+
+	case 'C':
+		printf("Good\n");
+		break;
+	case 'D':
+		printf("Poor\n");
+		break;
+	case 'F':
+		printf("Fail\n");
+		break;
+	default:
+		printf("잘못 입력하셨습니다\n");
+		break;
+	}
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Charlie
+#if 0
+
+int main(void)
+{
+	int sum = 0;
+	int i;
+	for (i=1; i<=10; i++)
+		sum += i;
+	printf("1부터 10까지의 합: %d\n", sum);
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Delta
+#if 0
+
+int main(void)
+{
+	int sum = 0;
+	int i;
+	for (i = 501; i <= 1000; i+=2)
+		sum += i;
+	printf("500부터 1000까지의 홀수의 합: %d\n", sum);
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Echo
+#if 0
+
+int main(void)
+{
+	int i, num, sum = 0;
+	printf("값 입력: ");
+	scanf("%d", &num);
+	for (i = 1; i <= num; i++)
+		sum += i;
+	printf("1부터 %d까지의 합: %d\n", num, sum);
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Foxtrot
+#if 0
+
+int main(void)
+{
+	int sum1 = 0, sum2 = 0;
+	int i;
+	for (i = 1; i <= 10; i++)
+	{
+		if (i % 2 == 1)
+			sum1 += i;
+		else
+			sum2 += i;
+	}
+	printf("1부터 10까지의 홀수의 합: %d\n", sum1);
+	printf("1부터 10까지의 짝수의 합: %d\n", sum2);
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Golf
+#if 0
+
+int main(void)
+{
+	int sum = 0;
+	int i;
+	i = 1;
+	while (i <= 10)
+	{
+		sum += i;
+		i++;
+	}
+	printf("1부터 10까지의 합: %d\n", sum);
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Hotel
+#if 0
+
+int main(void)
+{
+	int sum = 0;
+	int i;
+	i = 501;
+	while (i <= 1000)
+	{
+		sum += i;
+		i+=2;
+	}
+	printf("500부터 1000까지의 홀수의 합: %d\n", sum);
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region India
+#if 0
+
+int main(void)
+{
+	char gender;
+	int num;
+	double height, weight, bmi;
+	char yesno = 'Y';
+	while (yesno == 'Y' || yesno == 'y')
+	{
+		printf("성별 입력(남자: M, 여자: F): ");
+		scanf(" %c", &gender);
+		printf("학번 입력: ");
+		scanf("%d", &num);
+		printf("키, 몸무게 입력: ");
+		scanf("%lf %lf", &height, &weight);
+		printf("성별은 %c, 학번은 %d, 키는 %.1fcm, 몸무게는 %.1fkg\n", gender, num, height, weight);
+		bmi = weight / (height * height) * 10000;
+		printf("BMI는 %.1f ", bmi);
+		if (bmi < 18.5)
+		{
+			printf("저체중\n");
+		}
+		else if (bmi < 23)
+		{
+			printf("정상\n");
+		}
+		else if (bmi < 25)
+		{
+			printf("과체중\n");
+		}
+		else
+		{
+			printf("심각한 비만\n");
+		}
+		printf("게속 하시겠습니까(Y/N)? ");
+		scanf(" %c", &yesno);
+	}
+
 	return 0;
 }
 
