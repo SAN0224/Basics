@@ -611,3 +611,147 @@ int main(void)
 
 #endif
 #pragma endregion
+
+#pragma region Juliett(Test)
+#if 0
+
+int main(void)
+{
+	int i;
+	for (i = 30; i >= 20; i -= 2)
+		printf("%d ", i);
+	printf("\n");
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Kilo(Test)
+#if 0
+
+int main(void)
+{
+	int i, dan;
+	printf("몇 단? ");
+	scanf("%d", &dan);
+	for (i = 1; i <= 9; i++)
+		printf("%d * %d = %d\n", dan, i, dan * i);
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Lima(Test)
+#if 0
+
+int main(void)
+{
+	int a, sum = 0;
+	do
+	{
+		printf("정수를 입력하시오(0이면 종료) : ");
+		scanf("%d", &a);
+		sum += a;
+	} while (a != 0);
+	printf("정수의 합: %d\n", sum);
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Mike(Test)
+#if 0
+
+int main(void)
+{
+	int count, i = 1;
+	printf("정수를 입력하시오: ");
+	scanf("%d", &count);
+	while (1)
+	{
+		printf("%d\n", i);
+		if (i == count)
+		{
+			break;
+		}
+		i++;
+	}
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region November(Test)
+#if 0
+
+int main(void)
+{
+	int num1, num2;
+	while (1)
+	{
+		printf("정수 2개를 입력하시오(0 0 입력하면 종료): ");
+		scanf("%d %d", &num1, &num2);
+		if (num1 == 0 && num2 == 0)
+		{
+			break;
+		}
+		printf("%d + %d = %d\n", num1, num2, num1 + num2);
+	}
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Oscar(Test)
+#if 0
+
+int main(void)
+{
+	int i = 0;
+	for (i = 1; i <= 10; i++)
+	{
+		if (i % 4 == 0)
+			continue;
+		printf("%d ", i);
+	}
+	printf("\n");
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Papa(Test)
+#if 0
+
+int main(void)
+{
+	int i, sum = 0;
+	for (i = 11; i <= 20; i++)
+	{
+		if (i % 2 == 1)
+			continue;
+		sum += i;
+	}
+	printf("11부터 20까지 짝수의 합은 %d이다.\n", sum);
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Quebec(Test)
+#if 1
+
+int main(void)
+{
+	
+}
+
+#endif
+#pragma endregion
