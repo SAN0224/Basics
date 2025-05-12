@@ -745,12 +745,131 @@ int main(void)
 #endif
 #pragma endregion
 
-#pragma region Quebec(Test)
-#if 1
+#pragma region Quebec
+#if 0
+
+void print_line(void);
+void get_perimeter(int width, int height);
+double get_area_of_square(double length);
 
 int main(void)
 {
+	int w = 0, h = 0;
+	double len, result;
+	printf("가로, 세로 길이 입력: ");
+	scanf("%d %d", &w, &h);
+	get_perimeter(w, h);
+	print_line();
+	printf("한 변의 길이? ");
+	scanf("%lf", &len);
+	result = get_area_of_square(len);
+	printf("정사각형의 면적: %.1f\n", result);
+	return 0;
+}
+
+void print_line(void)
+{
+	printf("-------------------------------------\n");
+}
+void get_perimeter(int width, int height)
+{
+	printf("직사각형의 둘레: %d\n", 2*(width+height));
+}
+double get_area_of_square(double length)
+{
+	return length * length;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Romeo
+#if 0
+
+double average(int s1, int s2, int s3);
+char get_grade(double avg);
+void draw_line(char ch, int len);
+
+int main(void)
+{
+	char name[20];       
+	int  num, kor, eng, math;
+	double avg;     
+	char  grade;
 	
+	while (1) 
+	{
+		printf("번호 입력(0입력하면 종료): ");
+		scanf("%d", &num);
+		if (num == 0)    break;
+		printf("이름 입력: ");
+		scanf("%s", name);
+		printf("국어, 영어, 수학 점수 입력: ");
+		scanf("%d %d %d", &kor, &eng, &math);
+		avg = average(kor, eng, math);
+		grade = get_grade(avg);
+		printf("%d번, %s, 평균: %.1f, 등급 : %c\n", num, name, avg, grade);
+		draw_line('~', 40);
+	}
+	return 0;
+}
+
+double average(int s1, int s2, int s3)
+{
+	return (double)(s1 + s2 + s3) / 3;
+}
+
+char get_grade(double avg)
+{
+	if (avg >= 90) return 'A';
+	else if (avg >= 80) return 'B';
+	else if (avg >= 70) return 'C';
+	else return 'F';
+}
+
+void draw_line(char ch, int len)
+{
+	int i;
+	for (i = 0; i < len; i++)
+		printf("%c", ch);
+	printf("\n");
+}
+#endif
+#pragma endregion
+
+#pragma region Sierra
+#if 0
+
+#define TEST_SIZE 3 
+
+int main(void)
+{
+	int test[TEST_SIZE];
+	int i, smu = 0;
+
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Tango
+#if 0
+
+int main(void)
+{
+
+}
+
+#endif
+#pragma endregion
+
+#pragma region Uniform
+#if 0
+
+int main(void)
+{
+
 }
 
 #endif
