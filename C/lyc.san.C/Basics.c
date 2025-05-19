@@ -856,6 +856,118 @@ int main(void)
 #pragma region Tango
 #if 0
 
+#define TEST_SIZE 3
+
+int main(void)
+{
+	int test[TEST_SIZE] = { 10, 20, 30 };
+	int test2[TEST_SIZE] = {0};
+	int i, sum = 0;
+
+	test[2] = 40;
+
+	for (i = 0; i < TEST_SIZE; i++)
+	{
+		printf("정수를 입력하시오.");
+		scanf("%d", &test[i]);
+	}
+
+	for (i = 0; i < TEST_SIZE; i++)
+	{
+		printf("test[%d]은 %d\n", i, test[i]);
+		sum += test[i];
+	}
+	printf("배열 원소들의 합: %d\n", sum);
+
+	for (i = 0; i < TEST_SIZE; i++)
+	{
+		test2[i] = test[i];
+		printf("test2[%d]은 %d\n", i, test[i]);
+		
+	}
+
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Uniform
+#if 0
+
+#define SCORE_SIZE 4
+
+int main(void)
+{
+	int score[SCORE_SIZE] = { 0 };
+	int tot = 0, i;
+	double avg;
+
+	for (i = 0; i < SCORE_SIZE; i++)
+	{
+		printf("성적을 입력하시오: ");
+		scanf("%d", &score[i]);
+	}
+
+	for (i = 0; i < SCORE_SIZE; i++)
+	{
+		tot += score[i];
+		printf("%d번 성적: %d\n", i+1, score[i]);
+	}
+
+	avg = (double)tot / 4;
+	printf("총점: %d\n", tot);
+	printf("평균: %.1f\n", avg);
+
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region 	Victor
+#if 0
+
+#define ROW 3
+#define COL 5
+
+int main(void)
+{
+	int arr[ROW][COL] = { {1,2,3,4,5},{11,12,13,14},{21,22,23} };
+	int i, j;
+	for (i = 0; i < ROW; i++)
+	{
+		for (j = 0; j < COL; j++)
+			printf("%3d", arr[i][j]);
+		printf("\n");
+	}
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Whiskey
+#if 1
+
+int main(void)
+{
+	int a = 3;
+	float b = 10.5;
+
+	int* pa;
+	pa = &a;
+	float* pb = &b;
+
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Xray
+#if 0
+
 int main(void)
 {
 
@@ -864,7 +976,18 @@ int main(void)
 #endif
 #pragma endregion
 
-#pragma region Uniform
+#pragma region Yankee
+#if 0
+
+int main(void)
+{
+
+}
+
+#endif
+#pragma endregion
+
+#pragma region Zulu
 #if 0
 
 int main(void)
