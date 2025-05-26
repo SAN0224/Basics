@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <string.h>
 
 #pragma region 정리코드
 #if 0
@@ -948,7 +949,7 @@ int main(void)
 #pragma endregion
 
 #pragma region Whiskey
-#if 1
+#if 0
 
 int main(void)
 {
@@ -958,6 +959,14 @@ int main(void)
 	int* pa;
 	pa = &a;
 	float* pb = &b;
+
+	*pb = 25.5;
+	*pa += 20;
+
+	printf("a = %d\n", a);
+	printf("b = %.1f\n", *pb);
+	printf("a의 주소: %p\n", &a);
+	printf("b = %.1f\n", b);
 
 	return 0;
 }
@@ -970,7 +979,24 @@ int main(void)
 
 int main(void)
 {
+	int num1 = 7, num2 = 15;
+	char ac = 'S';
+	
+	int* pn1 = &num1;
+	char* pac = &ac;
 
+	*pn1 = 20;
+
+	printf("num1 = %d\n", *pn1);
+	
+	*pn1 = num2;
+
+	printf("num2 = %d\n", num2);
+	printf("num1의 주소 : %p\n", pn1);
+	printf("ac = %c\n", *pac);
+	printf("%d %d\n", sizeof(int*), sizeof(char*));
+
+	return 0;
 }
 
 #endif
@@ -979,20 +1005,74 @@ int main(void)
 #pragma region Yankee
 #if 0
 
+void increment(int* n);
+void GetCha(int n1, int n2, int* cha);
+
 int main(void)
 {
+	int a = 10, b = 5, result;
 
+	increment(&a);
+	printf("a=%d\n", a);
+
+	GetCha(a, b, &result);
+	printf("%d-%d=%d\n", a, b, result);
+
+	return 0;
+}
+void increment(int *n)
+{
+	++*n;
+}
+void GetCha(int n1, int n2, int *cha)
+{
+	*cha = n1 - n2;
 }
 
 #endif
 #pragma endregion
 
 #pragma region Zulu
+#if 1
+
+int main(void)
+{
+	char aaa[20] = "banana";
+	char bbb[20] = "";
+	char ccc[20] = "";
+
+	printf("aaa 문자열의 길이 : %d\n", strlen(aaa));
+	printf("aaa의 크기 : %d\n", sizeof(aaa));
+
+	strcpy(bbb, aaa);
+	strcpy(ccc, "apple");
+
+	printf("aaa : %s\n", aaa);
+	printf("bbb : %s\n", bbb);
+	printf("ccc : %s\n", ccc);
+
+	if (strcmp(aaa, bbb) == 0)
+		printf("same\n");
+
+	strcat(ccc, " mango");
+	printf("ccc: %s\n", ccc);
+
+	return 0;
+}
+
+#endif
+#pragma endregion
+
+#pragma region Sector A
 #if 0
 
 int main(void)
 {
+	char aaa[20] = "banana";
+	char bbb[20] = "";
+	char ccc[20] = "";
 
+	return 0;
 }
 
 #endif
